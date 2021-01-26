@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+</head>
+
+
+<body>
+    <h1>Customer Experience Survey</h1>
+    <form>
+        <label for="">Store Number
+            <select name="" id="">
+                <option value="">3797</option>
+                <option value="">9382</option>
+                <option value="">2631</option>
+            </select>
+        </label>
+        <fieldset>
+            <label for="">
+                <input type="date" name="" id="" min="2020-01-01" max="2020-12-31">
+                <input type="time" name="" id="">
+            </label>
+        </fieldset>First Name:
+        <input type="text" name="F" id="" placeholder="John">
+        Last Name:
+        <input type="text" name="F" id="" placeholder="Doe">
+        <br>
+        <label for="">Email:
+            <input type="email" name="" id="" placeholder="your email">
+        </label>
+        <br>
+        <label for="">
+            Male<input type="radio" name="" id="">
+            Female<input type="radio" name="" id="" checked>
+            Other<input type="radio" name="" id="">
+        </label>
+        <br>
+        <Label>Tell us about your experience:
+            <br>
+            <textarea name="" id="" cols="20" rows="2"></textarea>
+        </Label>
+        <br>
+        <label for="">Times visited in the last month:
+            <input type="number" name="" id="" size="4" min="1" max="30">
+        </label>
+        <br>
+        <label for="">Please check the box if you would be willing to be contacted about your experience
+            <input type="checkbox" name="" id="">
+        </label>
+        <br>
+        <label for="psw">
+            <p>Enter password</p>
+            <input type="text" id="passwordInput" oninput="validatePassword()">
+            <p id="validationMessage"></p>
+            <script>
+                function validatePassword() {
+                    var passLength = document.getElementById("passwordInput").value.length;
+                    var msg = "";
+                    if (passLength < 5 || passLength > 10) {
+                        msg = "Password should be 5-10 characters in length";
+                    } else {
+                        msg = "";
+                    }
+                    document.getElementById("validationMessage").innerHTML = msg;
+                }
+            </script>
+        </label>
+        <br>
+        <div class="alert">
+            <span class=""></span>
+        </div>
+        <br>
+        <label for="">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </label>
+    </form>
+</body>
+
+</html>
